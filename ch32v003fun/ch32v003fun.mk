@@ -1,15 +1,17 @@
 
-PREFIX?=riscv64-unknown-elf
+RV_PATH=/opt/riscv32ec
+PREFIX?=${RV_PATH}/bin/riscv-unknown-elf
 
 CH32V003FUN?=../../ch32v003fun
 MINICHLINK?=$(CH32V003FUN)/../minichlink
+
 
 CFLAGS+= \
 	-g -Os -flto -ffunction-sections \
 	-static-libgcc \
 	-march=rv32ec \
 	-mabi=ilp32e \
-	-I/usr/include/newlib \
+	-I${RV_PATH}/riscv-unknown-elf/include \
 	-I$(CH32V003FUN)/../extralibs \
 	-I$(CH32V003FUN) \
 	-nostdlib \

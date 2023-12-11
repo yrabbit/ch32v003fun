@@ -1,0 +1,3251 @@
+# 0 "../../ch32v003fun/ch32v003fun.c"
+# 1 "/home/rabbit/src/misc-src/ch32v003fun/examples/i2c_oled//"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "../../ch32v003fun/ch32v003fun.c"
+
+
+
+
+
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 1 3
+# 29 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/_ansi.h" 1 3
+# 10 "/opt/riscv32ec/riscv-unknown-elf/include/_ansi.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/newlib.h" 1 3
+# 14 "/opt/riscv32ec/riscv-unknown-elf/include/newlib.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/_newlib_version.h" 1 3
+# 15 "/opt/riscv32ec/riscv-unknown-elf/include/newlib.h" 2 3
+# 11 "/opt/riscv32ec/riscv-unknown-elf/include/_ansi.h" 2 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/config.h" 1 3
+
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/machine/ieeefp.h" 1 3
+# 5 "/opt/riscv32ec/riscv-unknown-elf/include/sys/config.h" 2 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/features.h" 1 3
+# 6 "/opt/riscv32ec/riscv-unknown-elf/include/sys/config.h" 2 3
+# 12 "/opt/riscv32ec/riscv-unknown-elf/include/_ansi.h" 2 3
+# 30 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 2 3
+
+
+
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/cdefs.h" 1 3
+# 45 "/opt/riscv32ec/riscv-unknown-elf/include/sys/cdefs.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 1 3
+# 41 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 3
+
+# 41 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 3
+typedef signed char __int8_t;
+
+typedef unsigned char __uint8_t;
+# 55 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 3
+typedef short int __int16_t;
+
+typedef short unsigned int __uint16_t;
+# 77 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 3
+typedef long int __int32_t;
+
+typedef long unsigned int __uint32_t;
+# 103 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 3
+typedef long long int __int64_t;
+
+typedef long long unsigned int __uint64_t;
+# 134 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 3
+typedef signed char __int_least8_t;
+
+typedef unsigned char __uint_least8_t;
+# 160 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 3
+typedef short int __int_least16_t;
+
+typedef short unsigned int __uint_least16_t;
+# 182 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 3
+typedef long int __int_least32_t;
+
+typedef long unsigned int __uint_least32_t;
+# 200 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 3
+typedef long long int __int_least64_t;
+
+typedef long long unsigned int __uint_least64_t;
+# 214 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_default_types.h" 3
+typedef long long int __intmax_t;
+
+
+
+
+
+
+
+typedef long long unsigned int __uintmax_t;
+
+
+
+
+
+
+
+typedef int __intptr_t;
+
+typedef unsigned int __uintptr_t;
+# 46 "/opt/riscv32ec/riscv-unknown-elf/include/sys/cdefs.h" 2 3
+
+# 1 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 1 3 4
+# 209 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 3 4
+typedef unsigned int size_t;
+# 48 "/opt/riscv32ec/riscv-unknown-elf/include/sys/cdefs.h" 2 3
+# 36 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 2 3
+# 1 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 1 3 4
+# 143 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 3 4
+typedef int ptrdiff_t;
+# 321 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 3 4
+typedef int wchar_t;
+# 415 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 3 4
+typedef struct {
+  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
+  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
+# 426 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 3 4
+} max_align_t;
+# 37 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 2 3
+
+
+
+# 1 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stdarg.h" 1 3 4
+# 40 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 41 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 2 3
+
+
+
+
+
+typedef __gnuc_va_list va_list;
+# 60 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 1 3
+# 13 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/_ansi.h" 1 3
+# 14 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 2 3
+# 1 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 1 3 4
+# 15 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 2 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_types.h" 1 3
+# 24 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_types.h" 3
+# 1 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 1 3 4
+# 350 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 3 4
+typedef unsigned int wint_t;
+# 25 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_types.h" 2 3
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_types.h" 1 3
+# 28 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_types.h" 2 3
+
+
+typedef long __blkcnt_t;
+
+
+
+typedef long __blksize_t;
+
+
+
+typedef __uint64_t __fsblkcnt_t;
+
+
+
+typedef __uint32_t __fsfilcnt_t;
+
+
+
+typedef long _off_t;
+
+
+
+
+
+typedef int __pid_t;
+
+
+
+typedef short __dev_t;
+
+
+
+typedef unsigned short __uid_t;
+
+
+typedef unsigned short __gid_t;
+
+
+
+typedef __uint32_t __id_t;
+
+
+
+
+
+
+
+typedef unsigned short __ino_t;
+# 90 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_types.h" 3
+typedef __uint32_t __mode_t;
+
+
+
+
+
+__extension__ typedef long long _off64_t;
+
+
+
+
+
+typedef _off_t __off_t;
+
+
+typedef _off64_t __loff_t;
+
+
+typedef long __key_t;
+
+
+
+
+
+
+
+typedef long _fpos_t;
+# 131 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_types.h" 3
+typedef unsigned int __size_t;
+# 147 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_types.h" 3
+typedef signed int _ssize_t;
+# 158 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_types.h" 3
+typedef _ssize_t __ssize_t;
+
+
+
+typedef struct
+{
+  int __count;
+  union
+  {
+    wint_t __wch;
+    unsigned char __wchb[4];
+  } __value;
+} _mbstate_t;
+
+
+
+
+typedef void *_iconv_t;
+
+
+
+
+
+
+typedef unsigned long __clock_t;
+
+
+
+
+
+
+typedef __int_least64_t __time_t;
+
+
+
+
+
+typedef unsigned long __clockid_t;
+
+
+typedef unsigned long __timer_t;
+
+
+typedef __uint8_t __sa_family_t;
+
+
+
+typedef __uint32_t __socklen_t;
+
+
+typedef int __nl_item;
+typedef unsigned short __nlink_t;
+typedef long __suseconds_t;
+typedef unsigned long __useconds_t;
+
+
+
+
+
+
+
+typedef __builtin_va_list __va_list;
+# 16 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 2 3
+
+
+
+
+
+
+typedef unsigned long __ULong;
+# 34 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/lock.h" 1 3
+# 11 "/opt/riscv32ec/riscv-unknown-elf/include/sys/lock.h" 3
+typedef int _LOCK_T;
+typedef int _LOCK_RECURSIVE_T;
+# 35 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 2 3
+typedef _LOCK_RECURSIVE_T _flock_t;
+
+
+
+
+
+
+
+struct _reent;
+
+struct __locale_t;
+
+
+
+
+
+
+struct _Bigint
+{
+  struct _Bigint *_next;
+  int _k, _maxwds, _sign, _wds;
+  __ULong _x[1];
+};
+
+
+struct __tm
+{
+  int __tm_sec;
+  int __tm_min;
+  int __tm_hour;
+  int __tm_mday;
+  int __tm_mon;
+  int __tm_year;
+  int __tm_wday;
+  int __tm_yday;
+  int __tm_isdst;
+};
+
+
+
+
+
+
+
+struct _on_exit_args {
+ void * _fnargs[32];
+ void * _dso_handle[32];
+
+ __ULong _fntypes;
+
+
+ __ULong _is_cxa;
+};
+# 98 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+struct _atexit {
+ struct _atexit *_next;
+ int _ind;
+
+ void (*_fns[32])(void);
+        struct _on_exit_args _on_exit_args;
+};
+# 122 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+struct __sbuf {
+ unsigned char *_base;
+ int _size;
+};
+# 186 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+struct __sFILE {
+  unsigned char *_p;
+  int _r;
+  int _w;
+  short _flags;
+  short _file;
+  struct __sbuf _bf;
+  int _lbfsize;
+
+
+
+
+
+
+  void * _cookie;
+
+  _ssize_t (*_read) (struct _reent *, void *,
+        char *, int);
+  _ssize_t (*_write) (struct _reent *, void *,
+         const char *,
+         int);
+  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
+  int (*_close) (struct _reent *, void *);
+
+
+  struct __sbuf _ub;
+  unsigned char *_up;
+  int _ur;
+
+
+  unsigned char _ubuf[3];
+  unsigned char _nbuf[1];
+
+
+  struct __sbuf _lb;
+
+
+  int _blksize;
+  _off_t _offset;
+
+
+  struct _reent *_data;
+
+
+
+  _flock_t _lock;
+
+  _mbstate_t _mbstate;
+  int _flags2;
+};
+# 292 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+typedef struct __sFILE __FILE;
+
+
+
+struct _glue
+{
+  struct _glue *_next;
+  int _niobs;
+  __FILE *_iobs;
+};
+# 324 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+struct _rand48 {
+  unsigned short _seed[3];
+  unsigned short _mult[3];
+  unsigned short _add;
+
+
+
+
+};
+# 613 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+struct _reent
+{
+  int _errno;
+
+
+
+
+  __FILE *_stdin, *_stdout, *_stderr;
+
+  int _inc;
+  char _emergency[25];
+
+
+  int _unspecified_locale_info;
+  struct __locale_t *_locale;
+
+  int __sdidinit;
+
+  void (*__cleanup) (struct _reent *);
+
+
+  struct _Bigint *_result;
+  int _result_k;
+  struct _Bigint *_p5s;
+  struct _Bigint **_freelist;
+
+
+  int _cvtlen;
+  char *_cvtbuf;
+
+  union
+    {
+      struct
+        {
+          unsigned int _unused_rand;
+          char * _strtok_last;
+          char _asctime_buf[26];
+          struct __tm _localtime_buf;
+          int _gamma_signgam;
+          __extension__ unsigned long long _rand_next;
+          struct _rand48 _r48;
+          _mbstate_t _mblen_state;
+          _mbstate_t _mbtowc_state;
+          _mbstate_t _wctomb_state;
+          char _l64a_buf[8];
+          char _signal_buf[24];
+          int _getdate_err;
+          _mbstate_t _mbrlen_state;
+          _mbstate_t _mbrtowc_state;
+          _mbstate_t _mbsrtowcs_state;
+          _mbstate_t _wcrtomb_state;
+          _mbstate_t _wcsrtombs_state;
+   int _h_errno;
+        } _reent;
+
+
+
+      struct
+        {
+
+          unsigned char * _nextf[30];
+          unsigned int _nmalloc[30];
+        } _unused;
+    } _new;
+# 685 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+  void (**(_sig_func))(int);
+
+
+
+
+  struct _glue __sglue;
+
+  __FILE __sf[3];
+
+};
+# 819 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+extern struct _reent *_impure_ptr ;
+extern struct _reent *const _global_impure_ptr ;
+
+void _reclaim_reent (struct _reent *);
+# 838 "/opt/riscv32ec/riscv-unknown-elf/include/sys/reent.h" 3
+extern struct _atexit *_global_atexit;
+# 61 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 2 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/types.h" 1 3
+# 28 "/opt/riscv32ec/riscv-unknown-elf/include/sys/types.h" 3
+typedef __uint8_t u_int8_t;
+
+
+typedef __uint16_t u_int16_t;
+
+
+typedef __uint32_t u_int32_t;
+
+
+typedef __uint64_t u_int64_t;
+
+typedef __intptr_t register_t;
+
+
+
+
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_stdint.h" 1 3
+# 20 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_stdint.h" 3
+typedef __int8_t int8_t ;
+
+
+
+typedef __uint8_t uint8_t ;
+
+
+
+
+
+
+
+typedef __int16_t int16_t ;
+
+
+
+typedef __uint16_t uint16_t ;
+
+
+
+
+
+
+
+typedef __int32_t int32_t ;
+
+
+
+typedef __uint32_t uint32_t ;
+
+
+
+
+
+
+
+typedef __int64_t int64_t ;
+
+
+
+typedef __uint64_t uint64_t ;
+
+
+
+
+
+
+typedef __intmax_t intmax_t;
+
+
+
+
+typedef __uintmax_t uintmax_t;
+
+
+
+
+typedef __intptr_t intptr_t;
+
+
+
+
+typedef __uintptr_t uintptr_t;
+# 47 "/opt/riscv32ec/riscv-unknown-elf/include/sys/types.h" 2 3
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/machine/endian.h" 1 3
+
+
+
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/machine/_endian.h" 1 3
+# 7 "/opt/riscv32ec/riscv-unknown-elf/include/machine/endian.h" 2 3
+# 50 "/opt/riscv32ec/riscv-unknown-elf/include/sys/types.h" 2 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/select.h" 1 3
+# 14 "/opt/riscv32ec/riscv-unknown-elf/include/sys/select.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_sigset.h" 1 3
+# 41 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_sigset.h" 3
+typedef unsigned long __sigset_t;
+# 15 "/opt/riscv32ec/riscv-unknown-elf/include/sys/select.h" 2 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_timeval.h" 1 3
+# 37 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_timeval.h" 3
+typedef __suseconds_t suseconds_t;
+
+
+
+
+typedef __int_least64_t time_t;
+# 54 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_timeval.h" 3
+struct timeval {
+ time_t tv_sec;
+ suseconds_t tv_usec;
+};
+# 16 "/opt/riscv32ec/riscv-unknown-elf/include/sys/select.h" 2 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/timespec.h" 1 3
+# 38 "/opt/riscv32ec/riscv-unknown-elf/include/sys/timespec.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_timespec.h" 1 3
+# 47 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_timespec.h" 3
+struct timespec {
+ time_t tv_sec;
+ long tv_nsec;
+};
+# 39 "/opt/riscv32ec/riscv-unknown-elf/include/sys/timespec.h" 2 3
+# 58 "/opt/riscv32ec/riscv-unknown-elf/include/sys/timespec.h" 3
+struct itimerspec {
+ struct timespec it_interval;
+ struct timespec it_value;
+};
+# 17 "/opt/riscv32ec/riscv-unknown-elf/include/sys/select.h" 2 3
+
+
+
+typedef __sigset_t sigset_t;
+# 34 "/opt/riscv32ec/riscv-unknown-elf/include/sys/select.h" 3
+typedef unsigned long __fd_mask;
+
+typedef __fd_mask fd_mask;
+# 48 "/opt/riscv32ec/riscv-unknown-elf/include/sys/select.h" 3
+typedef struct fd_set {
+ __fd_mask __fds_bits[(((64) + ((((int)sizeof(__fd_mask) * 8)) - 1)) / (((int)sizeof(__fd_mask) * 8)))];
+} fd_set;
+# 74 "/opt/riscv32ec/riscv-unknown-elf/include/sys/select.h" 3
+
+
+int select (int __n, fd_set *__readfds, fd_set *__writefds, fd_set *__exceptfds, struct timeval *__timeout)
+                                                   ;
+
+int pselect (int __n, fd_set *__readfds, fd_set *__writefds, fd_set *__exceptfds, const struct timespec *__timeout, const sigset_t *__set)
+
+                           ;
+
+
+
+# 51 "/opt/riscv32ec/riscv-unknown-elf/include/sys/types.h" 2 3
+
+
+
+
+typedef __uint32_t in_addr_t;
+
+
+
+
+typedef __uint16_t in_port_t;
+
+
+
+typedef __uintptr_t u_register_t;
+
+
+
+
+
+
+typedef unsigned char u_char;
+
+
+
+typedef unsigned short u_short;
+
+
+
+typedef unsigned int u_int;
+
+
+
+typedef unsigned long u_long;
+
+
+
+
+
+
+
+typedef unsigned short ushort;
+typedef unsigned int uint;
+typedef unsigned long ulong;
+
+
+
+typedef __blkcnt_t blkcnt_t;
+
+
+
+
+typedef __blksize_t blksize_t;
+
+
+
+
+typedef unsigned long clock_t;
+# 119 "/opt/riscv32ec/riscv-unknown-elf/include/sys/types.h" 3
+typedef long daddr_t;
+
+
+
+typedef char * caddr_t;
+
+
+
+
+typedef __fsblkcnt_t fsblkcnt_t;
+typedef __fsfilcnt_t fsfilcnt_t;
+
+
+
+
+typedef __id_t id_t;
+
+
+
+
+typedef __ino_t ino_t;
+# 157 "/opt/riscv32ec/riscv-unknown-elf/include/sys/types.h" 3
+typedef __off_t off_t;
+
+
+
+typedef __dev_t dev_t;
+
+
+
+typedef __uid_t uid_t;
+
+
+
+typedef __gid_t gid_t;
+
+
+
+
+typedef __pid_t pid_t;
+
+
+
+
+typedef __key_t key_t;
+
+
+
+
+typedef _ssize_t ssize_t;
+
+
+
+
+typedef __mode_t mode_t;
+
+
+
+
+typedef __nlink_t nlink_t;
+
+
+
+
+typedef __clockid_t clockid_t;
+
+
+
+
+
+typedef __timer_t timer_t;
+
+
+
+
+
+typedef __useconds_t useconds_t;
+# 220 "/opt/riscv32ec/riscv-unknown-elf/include/sys/types.h" 3
+typedef __int64_t sbintime_t;
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_pthreadtypes.h" 1 3
+# 23 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_pthreadtypes.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/sched.h" 1 3
+# 48 "/opt/riscv32ec/riscv-unknown-elf/include/sys/sched.h" 3
+struct sched_param {
+  int sched_priority;
+# 61 "/opt/riscv32ec/riscv-unknown-elf/include/sys/sched.h" 3
+};
+# 24 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_pthreadtypes.h" 2 3
+# 32 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_pthreadtypes.h" 3
+typedef __uint32_t pthread_t;
+# 61 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_pthreadtypes.h" 3
+typedef struct {
+  int is_initialized;
+  void *stackaddr;
+  int stacksize;
+  int contentionscope;
+  int inheritsched;
+  int schedpolicy;
+  struct sched_param schedparam;
+
+
+
+
+
+  int detachstate;
+} pthread_attr_t;
+# 154 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_pthreadtypes.h" 3
+typedef __uint32_t pthread_mutex_t;
+
+typedef struct {
+  int is_initialized;
+# 168 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_pthreadtypes.h" 3
+  int recursive;
+} pthread_mutexattr_t;
+
+
+
+
+
+
+typedef __uint32_t pthread_cond_t;
+
+
+
+typedef struct {
+  int is_initialized;
+  clock_t clock;
+
+
+
+} pthread_condattr_t;
+
+
+
+typedef __uint32_t pthread_key_t;
+
+typedef struct {
+  int is_initialized;
+  int init_executed;
+} pthread_once_t;
+# 224 "/opt/riscv32ec/riscv-unknown-elf/include/sys/types.h" 2 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/machine/types.h" 1 3
+# 225 "/opt/riscv32ec/riscv-unknown-elf/include/sys/types.h" 2 3
+# 62 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 2 3
+
+
+
+
+typedef __FILE FILE;
+
+
+
+
+
+
+typedef _fpos_t fpos_t;
+
+
+
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/stdio.h" 1 3
+# 80 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 2 3
+# 181 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+char * ctermid (char *);
+
+
+
+
+FILE * tmpfile (void);
+char * tmpnam (char *);
+
+char * tempnam (const char *, const char *) __attribute__((__malloc__)) __attribute__((__warn_unused_result__));
+
+int fclose (FILE *);
+int fflush (FILE *);
+FILE * freopen (const char *restrict, const char *restrict, FILE *restrict);
+void setbuf (FILE *restrict, char *restrict);
+int setvbuf (FILE *restrict, char *restrict, int, size_t);
+int fprintf (FILE *restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 2, 3)));
+int fscanf (FILE *restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__scanf__, 2, 3)));
+int printf (const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 1, 2)));
+int scanf (const char *restrict, ...)
+               __attribute__ ((__format__ (__scanf__, 1, 2)));
+int sscanf (const char *restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__scanf__, 2, 3)));
+int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 2, 0)));
+int vprintf (const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 1, 0)));
+int vsprintf (char *restrict, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 2, 0)));
+int fgetc (FILE *);
+char * fgets (char *restrict, int, FILE *restrict);
+int fputc (int, FILE *);
+int fputs (const char *restrict, FILE *restrict);
+int getc (FILE *);
+int getchar (void);
+char * gets (char *);
+int putc (int, FILE *);
+int putchar (int);
+int puts (const char *);
+int ungetc (int, FILE *);
+size_t fread (void *restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite (const void *restrict , size_t _size, size_t _n, FILE *);
+
+
+
+int fgetpos (FILE *restrict, fpos_t *restrict);
+
+int fseek (FILE *, long, int);
+
+
+
+int fsetpos (FILE *, const fpos_t *);
+
+long ftell ( FILE *);
+void rewind (FILE *);
+void clearerr (FILE *);
+int feof (FILE *);
+int ferror (FILE *);
+void perror (const char *);
+
+FILE * fopen (const char *restrict _name, const char *restrict _type);
+int sprintf (char *restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 2, 3)));
+int remove (const char *);
+int rename (const char *, const char *);
+# 257 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+int fseeko (FILE *, off_t, int);
+off_t ftello (FILE *);
+
+
+
+
+
+
+
+int snprintf (char *restrict, size_t, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 2, 0)));
+int vscanf (const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 1, 0)));
+int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 2, 0)));
+# 284 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+int asiprintf (char **, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 2, 3)));
+char * asniprintf (char *, size_t *, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+
+int diprintf (int, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 2, 3)));
+
+int fiprintf (FILE *, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 2, 3)));
+int fiscanf (FILE *, const char *, ...)
+               __attribute__ ((__format__ (__scanf__, 2, 3)));
+int iprintf (const char *, ...)
+               __attribute__ ((__format__ (__printf__, 1, 2)));
+int iscanf (const char *, ...)
+               __attribute__ ((__format__ (__scanf__, 1, 2)));
+int siprintf (char *, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 2, 3)));
+int siscanf (const char *, const char *, ...)
+               __attribute__ ((__format__ (__scanf__, 2, 3)));
+int sniprintf (char *, size_t, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+int vasiprintf (char **, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 2, 0)));
+char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+int vdiprintf (int, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 2, 0)));
+int vfiprintf (FILE *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 2, 0)));
+int vfiscanf (FILE *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 2, 0)));
+int viprintf (const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 1, 0)));
+int viscanf (const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 1, 0)));
+int vsiprintf (char *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 2, 0)));
+int vsiscanf (const char *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 2, 0)));
+int vsniprintf (char *, size_t, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+# 339 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+FILE * fdopen (int, const char *);
+
+int fileno (FILE *);
+
+
+int pclose (FILE *);
+FILE * popen (const char *, const char *);
+
+
+
+void setbuffer (FILE *, char *, int);
+int setlinebuf (FILE *);
+
+
+
+int getw (FILE *);
+int putw (int, FILE *);
+
+
+int getc_unlocked (FILE *);
+int getchar_unlocked (void);
+void flockfile (FILE *);
+int ftrylockfile (FILE *);
+void funlockfile (FILE *);
+int putc_unlocked (int, FILE *);
+int putchar_unlocked (int);
+# 374 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+int dprintf (int, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 2, 3)));
+
+FILE * fmemopen (void *restrict, size_t, const char *restrict);
+
+
+FILE * open_memstream (char **, size_t *);
+int vdprintf (int, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 2, 0)));
+
+
+
+int renameat (int, const char *, int, const char *);
+# 396 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+int _asiprintf_r (struct _reent *, char **, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 4, 5)));
+char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 4, 5)));
+int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _diprintf_r (struct _reent *, int, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _dprintf_r (struct _reent *, int, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _fclose_r (struct _reent *, FILE *);
+int _fcloseall_r (struct _reent *);
+FILE * _fdopen_r (struct _reent *, int, const char *);
+int _fflush_r (struct _reent *, FILE *);
+int _fgetc_r (struct _reent *, FILE *);
+int _fgetc_unlocked_r (struct _reent *, FILE *);
+char * _fgets_r (struct _reent *, char *restrict, int, FILE *restrict);
+char * _fgets_unlocked_r (struct _reent *, char *restrict, int, FILE *restrict);
+
+
+
+
+int _fgetpos_r (struct _reent *, FILE *, fpos_t *);
+int _fsetpos_r (struct _reent *, FILE *, const fpos_t *);
+
+int _fiprintf_r (struct _reent *, FILE *, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _fiscanf_r (struct _reent *, FILE *, const char *, ...)
+               __attribute__ ((__format__ (__scanf__, 3, 4)));
+FILE * _fmemopen_r (struct _reent *, void *restrict, size_t, const char *restrict);
+FILE * _fopen_r (struct _reent *, const char *restrict, const char *restrict);
+FILE * _freopen_r (struct _reent *, const char *restrict, const char *restrict, FILE *restrict);
+int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _fpurge_r (struct _reent *, FILE *);
+int _fputc_r (struct _reent *, int, FILE *);
+int _fputc_unlocked_r (struct _reent *, int, FILE *);
+int _fputs_r (struct _reent *, const char *restrict, FILE *restrict);
+int _fputs_unlocked_r (struct _reent *, const char *restrict, FILE *restrict);
+size_t _fread_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fread_unlocked_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
+int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__scanf__, 3, 4)));
+int _fseek_r (struct _reent *, FILE *, long, int);
+int _fseeko_r (struct _reent *, FILE *, _off_t, int);
+long _ftell_r (struct _reent *, FILE *);
+_off_t _ftello_r (struct _reent *, FILE *);
+void _rewind_r (struct _reent *, FILE *);
+size_t _fwrite_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_unlocked_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
+int _getc_r (struct _reent *, FILE *);
+int _getc_unlocked_r (struct _reent *, FILE *);
+int _getchar_r (struct _reent *);
+int _getchar_unlocked_r (struct _reent *);
+char * _gets_r (struct _reent *, char *);
+int _iprintf_r (struct _reent *, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 2, 3)));
+int _iscanf_r (struct _reent *, const char *, ...)
+               __attribute__ ((__format__ (__scanf__, 2, 3)));
+FILE * _open_memstream_r (struct _reent *, char **, size_t *);
+void _perror_r (struct _reent *, const char *);
+int _printf_r (struct _reent *, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 2, 3)));
+int _putc_r (struct _reent *, int, FILE *);
+int _putc_unlocked_r (struct _reent *, int, FILE *);
+int _putchar_unlocked_r (struct _reent *, int);
+int _putchar_r (struct _reent *, int);
+int _puts_r (struct _reent *, const char *);
+int _remove_r (struct _reent *, const char *);
+int _rename_r (struct _reent *,
+      const char *_old, const char *_new);
+int _scanf_r (struct _reent *, const char *restrict, ...)
+               __attribute__ ((__format__ (__scanf__, 2, 3)));
+int _siprintf_r (struct _reent *, char *, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _siscanf_r (struct _reent *, const char *, const char *, ...)
+               __attribute__ ((__format__ (__scanf__, 3, 4)));
+int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...)
+               __attribute__ ((__format__ (__printf__, 4, 5)));
+int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 4, 5)));
+int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...)
+               __attribute__ ((__format__ (__scanf__, 3, 4)));
+char * _tempnam_r (struct _reent *, const char *, const char *);
+FILE * _tmpfile_r (struct _reent *);
+char * _tmpnam_r (struct _reent *, char *);
+int _ungetc_r (struct _reent *, int, FILE *);
+int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 4, 0)));
+char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 4, 0)));
+int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 3, 0)));
+int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 3, 0)));
+int _viprintf_r (struct _reent *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 2, 0)));
+int _viscanf_r (struct _reent *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 2, 0)));
+int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 2, 0)));
+int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 2, 0)));
+int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 3, 0)));
+int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 4, 0)));
+int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 4, 0)));
+int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__printf__, 3, 0)));
+int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list)
+               __attribute__ ((__format__ (__scanf__, 3, 0)));
+
+
+
+int fpurge (FILE *);
+ssize_t __getdelim (char **, size_t *, int, FILE *);
+ssize_t __getline (char **, size_t *, FILE *);
+
+
+void clearerr_unlocked (FILE *);
+int feof_unlocked (FILE *);
+int ferror_unlocked (FILE *);
+int fileno_unlocked (FILE *);
+int fflush_unlocked (FILE *);
+int fgetc_unlocked (FILE *);
+int fputc_unlocked (int, FILE *);
+size_t fread_unlocked (void *restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite_unlocked (const void *restrict , size_t _size, size_t _n, FILE *);
+# 577 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+int __srget_r (struct _reent *, FILE *);
+int __swbuf_r (struct _reent *, int, FILE *);
+# 601 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+FILE *funopen (const void *__cookie,
+  int (*__readfn)(void *__cookie, char *__buf,
+    int __n),
+  int (*__writefn)(void *__cookie, const char *__buf,
+     int __n),
+  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
+  int (*__closefn)(void *__cookie));
+FILE *_funopen_r (struct _reent *, const void *__cookie,
+  int (*__readfn)(void *__cookie, char *__buf,
+    int __n),
+  int (*__writefn)(void *__cookie, const char *__buf,
+     int __n),
+  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
+  int (*__closefn)(void *__cookie));
+# 687 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+static __inline__ int __sputc_r(struct _reent *_ptr, int _c, FILE *_p) {
+
+
+
+
+ if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\n'))
+  return (*_p->_p++ = _c);
+ else
+  return (__swbuf_r(_ptr, _c, _p));
+}
+# 741 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+static __inline int
+_getchar_unlocked(void)
+{
+ struct _reent *_ptr;
+
+ _ptr = _impure_ptr;
+ return ((--(((_ptr)->_stdin))->_r < 0 ? __srget_r(_ptr, ((_ptr)->_stdin)) : (int)(*(((_ptr)->_stdin))->_p++)));
+}
+
+static __inline int
+_putchar_unlocked(int _c)
+{
+ struct _reent *_ptr;
+
+ _ptr = _impure_ptr;
+ return (__sputc_r(_ptr, _c, ((_ptr)->_stdout)));
+}
+# 797 "/opt/riscv32ec/riscv-unknown-elf/include/stdio.h" 3
+
+# 9 "../../ch32v003fun/ch32v003fun.c" 2
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/string.h" 1 3
+# 17 "/opt/riscv32ec/riscv-unknown-elf/include/string.h" 3
+# 1 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stddef.h" 1 3 4
+# 18 "/opt/riscv32ec/riscv-unknown-elf/include/string.h" 2 3
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_locale.h" 1 3
+# 9 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_locale.h" 3
+struct __locale_t;
+typedef struct __locale_t *locale_t;
+# 21 "/opt/riscv32ec/riscv-unknown-elf/include/string.h" 2 3
+
+
+
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/strings.h" 1 3
+# 44 "/opt/riscv32ec/riscv-unknown-elf/include/strings.h" 3
+
+
+int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
+void bcopy(const void *, void *, size_t);
+void bzero(void *, size_t);
+
+
+void explicit_bzero(void *, size_t);
+
+
+int ffs(int) __attribute__((__const__));
+
+
+int ffsl(long) __attribute__((__const__));
+int ffsll(long long) __attribute__((__const__));
+int fls(int) __attribute__((__const__));
+int flsl(long) __attribute__((__const__));
+int flsll(long long) __attribute__((__const__));
+
+
+char *index(const char *, int) __attribute__((__pure__));
+char *rindex(const char *, int) __attribute__((__pure__));
+
+int strcasecmp(const char *, const char *) __attribute__((__pure__));
+int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
+
+
+int strcasecmp_l (const char *, const char *, locale_t);
+int strncasecmp_l (const char *, const char *, size_t, locale_t);
+
+
+# 25 "/opt/riscv32ec/riscv-unknown-elf/include/string.h" 2 3
+
+
+
+
+void * memchr (const void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void * memcpy (void *restrict, const void *restrict, size_t);
+void * memmove (void *, const void *, size_t);
+void * memset (void *, int, size_t);
+char *strcat (char *restrict, const char *restrict);
+char *strchr (const char *, int);
+int strcmp (const char *, const char *);
+int strcoll (const char *, const char *);
+char *strcpy (char *restrict, const char *restrict);
+size_t strcspn (const char *, const char *);
+char *strerror (int);
+size_t strlen (const char *);
+char *strncat (char *restrict, const char *restrict, size_t);
+int strncmp (const char *, const char *, size_t);
+char *strncpy (char *restrict, const char *restrict, size_t);
+char *strpbrk (const char *, const char *);
+char *strrchr (const char *, int);
+size_t strspn (const char *, const char *);
+char *strstr (const char *, const char *);
+
+char *strtok (char *restrict, const char *restrict);
+
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+
+int strcoll_l (const char *, const char *, locale_t);
+char *strerror_l (int, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+
+
+int timingsafe_bcmp (const void *, const void *, size_t);
+int timingsafe_memcmp (const void *, const void *, size_t);
+
+
+void * memccpy (void *restrict, const void *restrict, int, size_t);
+# 76 "/opt/riscv32ec/riscv-unknown-elf/include/string.h" 3
+char *stpcpy (char *restrict, const char *restrict);
+char *stpncpy (char *restrict, const char *restrict, size_t);
+
+
+
+
+
+
+char *strdup (const char *) __attribute__((__malloc__)) __attribute__((__warn_unused_result__));
+
+char *_strdup_r (struct _reent *, const char *);
+
+char *strndup (const char *, size_t) __attribute__((__malloc__)) __attribute__((__warn_unused_result__));
+
+char *_strndup_r (struct _reent *, const char *, size_t);
+# 100 "/opt/riscv32ec/riscv-unknown-elf/include/string.h" 3
+int strerror_r (int, char *, size_t)
+
+             __asm__ ("" "__xpg_strerror_r")
+
+  ;
+
+
+
+
+
+
+
+char * _strerror_r (struct _reent *, int, int, int *);
+
+
+size_t strlcat (char *, const char *, size_t);
+size_t strlcpy (char *, const char *, size_t);
+
+
+size_t strnlen (const char *, size_t);
+
+
+char *strsep (char **, const char *);
+
+
+char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
+
+char *strlwr (char *);
+char *strupr (char *);
+
+
+
+char *strsignal (int __signo);
+# 175 "/opt/riscv32ec/riscv-unknown-elf/include/string.h" 3
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/string.h" 1 3
+# 15 "/opt/riscv32ec/riscv-unknown-elf/include/sys/string.h" 3
+static __inline unsigned long __libc_detect_null(unsigned long w)
+{
+  unsigned long mask = 0x7f7f7f7f;
+  if (sizeof (long) == 8)
+    mask = ((mask << 16) << 16) | mask;
+  return ~(((w & mask) + mask) | w | mask);
+}
+# 176 "/opt/riscv32ec/riscv-unknown-elf/include/string.h" 2 3
+
+
+# 10 "../../ch32v003fun/ch32v003fun.c" 2
+# 1 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stdarg.h" 1 3 4
+# 11 "../../ch32v003fun/ch32v003fun.c" 2
+# 1 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include-fixed/limits.h" 1 3 4
+# 12 "../../ch32v003fun/ch32v003fun.c" 2
+# 1 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stdint.h" 1 3 4
+# 9 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stdint.h" 3 4
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/stdint.h" 1 3 4
+# 13 "/opt/riscv32ec/riscv-unknown-elf/include/stdint.h" 3 4
+# 1 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_intsup.h" 1 3 4
+# 35 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_intsup.h" 3 4
+       
+       
+       
+       
+       
+       
+       
+       
+# 190 "/opt/riscv32ec/riscv-unknown-elf/include/sys/_intsup.h" 3 4
+       
+       
+       
+       
+       
+       
+       
+       
+# 14 "/opt/riscv32ec/riscv-unknown-elf/include/stdint.h" 2 3 4
+
+
+
+
+
+
+
+typedef __int_least8_t int_least8_t;
+typedef __uint_least8_t uint_least8_t;
+
+
+
+
+typedef __int_least16_t int_least16_t;
+typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int_least32_t int_least32_t;
+typedef __uint_least32_t uint_least32_t;
+
+
+
+
+typedef __int_least64_t int_least64_t;
+typedef __uint_least64_t uint_least64_t;
+# 51 "/opt/riscv32ec/riscv-unknown-elf/include/stdint.h" 3 4
+  typedef int int_fast8_t;
+  typedef unsigned int uint_fast8_t;
+# 61 "/opt/riscv32ec/riscv-unknown-elf/include/stdint.h" 3 4
+  typedef int int_fast16_t;
+  typedef unsigned int uint_fast16_t;
+# 71 "/opt/riscv32ec/riscv-unknown-elf/include/stdint.h" 3 4
+  typedef int int_fast32_t;
+  typedef unsigned int uint_fast32_t;
+# 81 "/opt/riscv32ec/riscv-unknown-elf/include/stdint.h" 3 4
+  typedef long long int int_fast64_t;
+  typedef long long unsigned int uint_fast64_t;
+# 10 "/opt/riscv32ec/lib/gcc/riscv-unknown-elf/11.2.0/include/stdint.h" 2 3 4
+# 13 "../../ch32v003fun/ch32v003fun.c" 2
+# 1 "../../ch32v003fun/ch32v003fun.h" 1
+
+
+
+
+
+# 1 "./funconfig.h" 1
+# 7 "../../ch32v003fun/ch32v003fun.h" 2
+# 114 "../../ch32v003fun/ch32v003fun.h"
+
+# 114 "../../ch32v003fun/ch32v003fun.h"
+typedef enum IRQn
+{
+
+    NonMaskableInt_IRQn = 2,
+    EXC_IRQn = 3,
+    SysTicK_IRQn = 12,
+    Software_IRQn = 14,
+
+
+    WWDG_IRQn = 16,
+    PVD_IRQn = 17,
+    FLASH_IRQn = 18,
+    RCC_IRQn = 19,
+    EXTI7_0_IRQn = 20,
+    AWU_IRQn = 21,
+    DMA1_Channel1_IRQn = 22,
+    DMA1_Channel2_IRQn = 23,
+    DMA1_Channel3_IRQn = 24,
+    DMA1_Channel4_IRQn = 25,
+    DMA1_Channel5_IRQn = 26,
+    DMA1_Channel6_IRQn = 27,
+    DMA1_Channel7_IRQn = 28,
+    ADC_IRQn = 29,
+    I2C1_EV_IRQn = 30,
+    I2C1_ER_IRQn = 31,
+    USART1_IRQn = 32,
+    SPI1_IRQn = 33,
+    TIM1_BRK_IRQn = 34,
+    TIM1_UP_IRQn = 35,
+    TIM1_TRG_COM_IRQn = 36,
+    TIM1_CC_IRQn = 37,
+    TIM2_IRQn = 38,
+
+} IRQn_Type;
+# 161 "../../ch32v003fun/ch32v003fun.h"
+typedef struct
+{
+    volatile uint32_t STATR;
+    volatile uint32_t CTLR1;
+    volatile uint32_t CTLR2;
+    volatile uint32_t SAMPTR1;
+    volatile uint32_t SAMPTR2;
+    volatile uint32_t IOFR1;
+    volatile uint32_t IOFR2;
+    volatile uint32_t IOFR3;
+    volatile uint32_t IOFR4;
+    volatile uint32_t WDHTR;
+    volatile uint32_t WDLTR;
+    volatile uint32_t RSQR1;
+    volatile uint32_t RSQR2;
+    volatile uint32_t RSQR3;
+    volatile uint32_t ISQR;
+    volatile uint32_t IDATAR1;
+    volatile uint32_t IDATAR2;
+    volatile uint32_t IDATAR3;
+    volatile uint32_t IDATAR4;
+    volatile uint32_t RDATAR;
+    volatile uint32_t DLYR;
+} ADC_TypeDef;
+
+
+typedef struct
+{
+    volatile uint32_t CFGR0;
+    volatile uint32_t CFGR1;
+} DBGMCU_TypeDef;
+
+
+typedef struct
+{
+    volatile uint32_t CFGR;
+    volatile uint32_t CNTR;
+    volatile uint32_t PADDR;
+    volatile uint32_t MADDR;
+} DMA_Channel_TypeDef;
+
+typedef struct
+{
+    volatile uint32_t INTFR;
+    volatile uint32_t INTFCR;
+} DMA_TypeDef;
+
+
+typedef struct
+{
+    volatile uint32_t INTENR;
+    volatile uint32_t EVENR;
+    volatile uint32_t RTENR;
+    volatile uint32_t FTENR;
+    volatile uint32_t SWIEVR;
+    volatile uint32_t INTFR;
+} EXTI_TypeDef;
+
+
+typedef struct
+{
+    volatile uint32_t ACTLR;
+    volatile uint32_t KEYR;
+    volatile uint32_t OBKEYR;
+    volatile uint32_t STATR;
+    volatile uint32_t CTLR;
+    volatile uint32_t ADDR;
+    volatile uint32_t RESERVED;
+    volatile uint32_t OBR;
+    volatile uint32_t WPR;
+    volatile uint32_t MODEKEYR;
+    volatile uint32_t BOOT_MODEKEYR;
+} FLASH_TypeDef;
+
+
+typedef struct
+{
+    volatile uint16_t RDPR;
+    volatile uint16_t USER;
+    volatile uint16_t Data0;
+    volatile uint16_t Data1;
+    volatile uint16_t WRPR0;
+    volatile uint16_t WRPR1;
+} OB_TypeDef;
+
+typedef struct
+{
+ volatile uint16_t CAP;
+ volatile uint16_t RES1;
+ volatile uint32_t RES2;
+ volatile uint32_t UID0;
+ volatile uint32_t UID1;
+ volatile uint32_t UID2;
+ volatile uint32_t RES3;
+} ESG_TypeDef;
+
+
+typedef enum
+{
+ GPIO_CFGLR_IN_ANALOG = 0,
+ GPIO_CFGLR_IN_FLOAT = 4,
+ GPIO_CFGLR_IN_PUPD = 8,
+ GPIO_CFGLR_OUT_10Mhz_PP = 1,
+ GPIO_CFGLR_OUT_2Mhz_PP = 2,
+ GPIO_CFGLR_OUT_50Mhz_PP = 3,
+ GPIO_CFGLR_OUT_10Mhz_OD = 5,
+ GPIO_CFGLR_OUT_2Mhz_OD = 6,
+ GPIO_CFGLR_OUT_50Mhz_OD = 7,
+ GPIO_CFGLR_OUT_10Mhz_AF_PP = 9,
+ GPIO_CFGLR_OUT_2Mhz_AF_PP = 10,
+ GPIO_CFGLR_OUT_50Mhz_AF_PP = 11,
+ GPIO_CFGLR_OUT_10Mhz_AF_OD = 13,
+ GPIO_CFGLR_OUT_2Mhz_AF_OD = 14,
+ GPIO_CFGLR_OUT_50Mhz_AF_OD = 15,
+} GPIO_CFGLR_PIN_MODE_Typedef;
+
+typedef union {
+ uint32_t __FULL;
+ struct {
+  GPIO_CFGLR_PIN_MODE_Typedef PIN0 :4;
+  GPIO_CFGLR_PIN_MODE_Typedef PIN1 :4;
+  GPIO_CFGLR_PIN_MODE_Typedef PIN2 :4;
+  GPIO_CFGLR_PIN_MODE_Typedef PIN3 :4;
+  GPIO_CFGLR_PIN_MODE_Typedef PIN4 :4;
+  GPIO_CFGLR_PIN_MODE_Typedef PIN5 :4;
+  GPIO_CFGLR_PIN_MODE_Typedef PIN6 :4;
+  GPIO_CFGLR_PIN_MODE_Typedef PIN7 :4;
+ };
+} GPIO_CFGLR_t;
+typedef union {
+ uint32_t __FULL;
+ const struct {
+  uint32_t IDR0 :1;
+  uint32_t IDR1 :1;
+  uint32_t IDR2 :1;
+  uint32_t IDR3 :1;
+  uint32_t IDR4 :1;
+  uint32_t IDR5 :1;
+  uint32_t IDR6 :1;
+  uint32_t IDR7 :1;
+  uint32_t :24;
+ };
+} GPIO_INDR_t;
+typedef union {
+ uint32_t __FULL;
+ struct {
+  uint32_t ODR0 :1;
+  uint32_t ODR1 :1;
+  uint32_t ODR2 :1;
+  uint32_t ODR3 :1;
+  uint32_t ODR4 :1;
+  uint32_t ODR5 :1;
+  uint32_t ODR6 :1;
+  uint32_t ODR7 :1;
+  uint32_t :24;
+ };
+} GPIO_OUTDR_t;
+typedef union {
+ uint32_t __FULL;
+ struct {
+  uint32_t BS0 :1;
+  uint32_t BS1 :1;
+  uint32_t BS2 :1;
+  uint32_t BS3 :1;
+  uint32_t BS4 :1;
+  uint32_t BS5 :1;
+  uint32_t BS6 :1;
+  uint32_t BS7 :1;
+  uint32_t :8;
+  uint32_t BR0 :1;
+  uint32_t BR1 :1;
+  uint32_t BR2 :1;
+  uint32_t BR3 :1;
+  uint32_t BR4 :1;
+  uint32_t BR5 :1;
+  uint32_t BR6 :1;
+  uint32_t BR7 :1;
+  uint32_t :8;
+ };
+} GPIO_BSHR_t;
+typedef union {
+ uint32_t __FULL;
+ struct {
+  uint32_t BR0 :1;
+  uint32_t BR1 :1;
+  uint32_t BR2 :1;
+  uint32_t BR3 :1;
+  uint32_t BR4 :1;
+  uint32_t BR5 :1;
+  uint32_t BR6 :1;
+  uint32_t BR7 :1;
+  uint32_t :24;
+ };
+} GPIO_BCR_t;
+typedef union {
+ uint32_t __FULL;
+ struct {
+  uint32_t LCK0 :1;
+  uint32_t LCK1 :1;
+  uint32_t LCK2 :1;
+  uint32_t LCK3 :1;
+  uint32_t LCK4 :1;
+  uint32_t LCK5 :1;
+  uint32_t LCK6 :1;
+  uint32_t LCK7 :1;
+  uint32_t LCKK :1;
+  uint32_t :23;
+ };
+} GPIO_LCKR_t;
+typedef struct
+{
+ volatile uint32_t CFGLR;
+ volatile uint32_t CFGHR;
+ volatile const uint32_t INDR;
+ volatile uint32_t OUTDR;
+ volatile uint32_t BSHR;
+ volatile uint32_t BCR;
+ volatile uint32_t LCKR;
+} GPIO_TypeDef;
+
+
+
+
+
+
+typedef struct
+{
+    uint32_t RESERVED0;
+    volatile uint32_t PCFR1;
+    volatile uint32_t EXTICR;
+} AFIO_TypeDef;
+
+
+typedef struct
+{
+    volatile uint16_t CTLR1;
+    uint16_t RESERVED0;
+    volatile uint16_t CTLR2;
+    uint16_t RESERVED1;
+    volatile uint16_t OADDR1;
+    uint16_t RESERVED2;
+    volatile uint16_t OADDR2;
+    uint16_t RESERVED3;
+    volatile uint16_t DATAR;
+    uint16_t RESERVED4;
+    volatile uint16_t STAR1;
+    uint16_t RESERVED5;
+    volatile uint16_t STAR2;
+    uint16_t RESERVED6;
+    volatile uint16_t CKCFGR;
+    uint16_t RESERVED7;
+} I2C_TypeDef;
+
+
+typedef struct
+{
+    volatile uint32_t CTLR;
+    volatile uint32_t PSCR;
+    volatile uint32_t RLDR;
+    volatile uint32_t STATR;
+} IWDG_TypeDef;
+
+
+typedef struct
+{
+    volatile uint32_t CTLR;
+    volatile uint32_t CSR;
+    volatile uint32_t AWUCSR;
+    volatile uint32_t AWUWR;
+    volatile uint32_t AWUPSC;
+} PWR_TypeDef;
+
+
+typedef struct
+{
+    volatile uint32_t CTLR;
+    volatile uint32_t CFGR0;
+    volatile uint32_t INTR;
+    volatile uint32_t APB2PRSTR;
+    volatile uint32_t APB1PRSTR;
+    volatile uint32_t AHBPCENR;
+    volatile uint32_t APB2PCENR;
+    volatile uint32_t APB1PCENR;
+    volatile uint32_t RESERVED0;
+    volatile uint32_t RSTSCKR;
+} RCC_TypeDef;
+
+
+typedef struct
+{
+    volatile uint16_t CTLR1;
+    uint16_t RESERVED0;
+    volatile uint16_t CTLR2;
+    uint16_t RESERVED1;
+    volatile uint16_t STATR;
+    uint16_t RESERVED2;
+    volatile uint16_t DATAR;
+    uint16_t RESERVED3;
+    volatile uint16_t CRCR;
+    uint16_t RESERVED4;
+    volatile uint16_t RCRCR;
+    uint16_t RESERVED5;
+    volatile uint16_t TCRCR;
+    uint16_t RESERVED6;
+    uint32_t RESERVED7;
+    uint32_t RESERVED8;
+    volatile uint16_t HSCR;
+    uint16_t RESERVED9;
+} SPI_TypeDef;
+
+
+typedef struct
+{
+    volatile uint16_t CTLR1;
+    uint16_t RESERVED0;
+    volatile uint16_t CTLR2;
+    uint16_t RESERVED1;
+    volatile uint16_t SMCFGR;
+    uint16_t RESERVED2;
+    volatile uint16_t DMAINTENR;
+    uint16_t RESERVED3;
+    volatile uint16_t INTFR;
+    uint16_t RESERVED4;
+    volatile uint16_t SWEVGR;
+    uint16_t RESERVED5;
+    volatile uint16_t CHCTLR1;
+    uint16_t RESERVED6;
+    volatile uint16_t CHCTLR2;
+    uint16_t RESERVED7;
+    volatile uint16_t CCER;
+    uint16_t RESERVED8;
+    volatile uint16_t CNT;
+    uint16_t RESERVED9;
+    volatile uint16_t PSC;
+    uint16_t RESERVED10;
+    volatile uint16_t ATRLR;
+    uint16_t RESERVED11;
+    volatile uint16_t RPTCR;
+    uint16_t RESERVED12;
+    volatile uint32_t CH1CVR;
+    volatile uint32_t CH2CVR;
+    volatile uint32_t CH3CVR;
+    volatile uint32_t CH4CVR;
+    volatile uint16_t BDTR;
+    uint16_t RESERVED13;
+    volatile uint16_t DMACFGR;
+    uint16_t RESERVED14;
+    volatile uint16_t DMAADR;
+    uint16_t RESERVED15;
+} TIM_TypeDef;
+
+
+typedef struct
+{
+    volatile uint16_t STATR;
+    uint16_t RESERVED0;
+    volatile uint16_t DATAR;
+    uint16_t RESERVED1;
+    volatile uint16_t BRR;
+    uint16_t RESERVED2;
+    volatile uint16_t CTLR1;
+    uint16_t RESERVED3;
+    volatile uint16_t CTLR2;
+    uint16_t RESERVED4;
+    volatile uint16_t CTLR3;
+    uint16_t RESERVED5;
+    volatile uint16_t GPR;
+    uint16_t RESERVED6;
+} USART_TypeDef;
+
+
+typedef struct
+{
+    volatile uint32_t CTLR;
+    volatile uint32_t CFGR;
+    volatile uint32_t STATR;
+} WWDG_TypeDef;
+
+
+typedef struct
+{
+    volatile uint32_t EXTEN_CTR;
+} EXTEN_TypeDef;
+# 2992 "../../ch32v003fun/ch32v003fun.h"
+static volatile const uint8_t APBAHBPrescTable[16] = {1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8};
+static volatile const uint8_t ADCPrescTable[20] = {2, 4, 6, 8, 4, 8, 12, 16, 8, 16, 24, 32, 16, 32, 48, 64, 32, 64, 96, 128};
+# 3294 "../../ch32v003fun/ch32v003fun.h"
+typedef enum
+{
+    EXTI_Mode_Interrupt = 0x00,
+    EXTI_Mode_Event = 0x04
+} EXTIMode_TypeDef;
+
+
+typedef enum
+{
+    EXTI_Trigger_Rising = 0x08,
+    EXTI_Trigger_Falling = 0x0C,
+    EXTI_Trigger_Rising_Falling = 0x10
+} EXTITrigger_TypeDef;
+# 3328 "../../ch32v003fun/ch32v003fun.h"
+typedef enum
+{
+    FLASH_BUSY = 1,
+    FLASH_ERROR_PG,
+    FLASH_ERROR_WRP,
+    FLASH_COMPLETE,
+    FLASH_TIMEOUT
+} FLASH_Status;
+# 3407 "../../ch32v003fun/ch32v003fun.h"
+typedef enum
+{
+ GPIO_Speed_In,
+ GPIO_Speed_10MHz,
+ GPIO_Speed_2MHz,
+ GPIO_Speed_50MHz
+} GPIOSpeed_TypeDef;
+# 3443 "../../ch32v003fun/ch32v003fun.h"
+typedef enum
+{
+    Bit_RESET = 0,
+    Bit_SET
+} BitAction;
+# 3776 "../../ch32v003fun/ch32v003fun.h"
+typedef enum
+{
+    CHP0 = 0,
+    CHP1
+} OPA_PSEL_TypeDef;
+
+
+typedef enum
+{
+    CHN0 = 0,
+    CHN1
+} OPA_NSEL_TypeDef;
+
+
+
+typedef struct
+{
+    OPA_PSEL_TypeDef PSEL;
+    OPA_NSEL_TypeDef NSEL;
+} OPA_InitTypeDef;
+# 4436 "../../ch32v003fun/ch32v003fun.h"
+typedef volatile const uint32_t vuc32;
+typedef volatile const uint16_t vuc16;
+typedef volatile const uint8_t vuc8;
+
+typedef const uint32_t uc32;
+typedef const uint16_t uc16;
+typedef const uint8_t uc8;
+
+typedef volatile const int32_t vsc32;
+typedef volatile const int16_t vsc16;
+typedef volatile const int8_t vsc8;
+
+typedef const int32_t sc32;
+typedef const int16_t sc16;
+typedef const int8_t sc8;
+
+typedef volatile uint32_t vu32;
+typedef volatile uint16_t vu16;
+typedef volatile uint8_t vu8;
+
+typedef uint32_t u32;
+typedef uint16_t u16;
+typedef uint8_t u8;
+
+typedef volatile int32_t vs32;
+typedef volatile int16_t vs16;
+typedef volatile int8_t vs8;
+
+typedef int32_t s32;
+typedef int16_t s16;
+typedef int8_t s8;
+
+typedef enum {NoREADY = 0, READY = !NoREADY} ErrorStatus;
+
+typedef enum {DISABLE = 0, ENABLE = !DISABLE} FunctionalState;
+
+typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
+
+
+
+
+typedef struct{
+    volatile const uint32_t ISR[8];
+    volatile const uint32_t IPR[8];
+    volatile uint32_t ITHRESDR;
+    volatile uint32_t RESERVED;
+    volatile uint32_t CFGR;
+    volatile const uint32_t GISR;
+    volatile uint8_t VTFIDR[4];
+    uint8_t RESERVED0[12];
+    volatile uint32_t VTFADDR[4];
+    uint8_t RESERVED1[0x90];
+    volatile uint32_t IENR[8];
+    uint8_t RESERVED2[0x60];
+    volatile uint32_t IRER[8];
+    uint8_t RESERVED3[0x60];
+    volatile uint32_t IPSR[8];
+    uint8_t RESERVED4[0x60];
+    volatile uint32_t IPRR[8];
+    uint8_t RESERVED5[0x60];
+    volatile uint32_t IACTR[8];
+    uint8_t RESERVED6[0xE0];
+    volatile uint8_t IPRIOR[256];
+    uint8_t RESERVED7[0x810];
+    volatile uint32_t SCTLR;
+}PFIC_Type;
+
+
+typedef struct
+{
+    volatile uint32_t CTLR;
+    volatile uint32_t SR;
+    volatile uint32_t CNT;
+    uint32_t RESERVED0;
+    volatile uint32_t CMP;
+    uint32_t RESERVED1;
+}SysTick_Type;
+# 4533 "../../ch32v003fun/ch32v003fun.h"
+static inline void __enable_irq()
+{
+  uint32_t result;
+
+    __asm volatile(
+
+  ".option arch, +zicsr\n"
+
+  "csrr %0," "mstatus": "=r"(result));
+  result |= 0x88;
+  __asm volatile ("csrw mstatus, %0" : : "r" (result) );
+}
+# 4553 "../../ch32v003fun/ch32v003fun.h"
+static inline void __disable_irq()
+{
+  uint32_t result;
+
+    __asm volatile(
+
+  ".option arch, +zicsr\n"
+
+  "csrr %0," "mstatus": "=r"(result));
+  result &= ~0x88;
+  __asm volatile ("csrw mstatus, %0" : : "r" (result) );
+}
+# 4573 "../../ch32v003fun/ch32v003fun.h"
+static inline void __NOP()
+{
+  __asm volatile ("nop");
+}
+# 4587 "../../ch32v003fun/ch32v003fun.h"
+static inline void NVIC_EnableIRQ(IRQn_Type IRQn)
+{
+  ((PFIC_Type *) 0xE000E000 )->IENR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F));
+}
+# 4601 "../../ch32v003fun/ch32v003fun.h"
+static inline void NVIC_DisableIRQ(IRQn_Type IRQn)
+{
+  ((PFIC_Type *) 0xE000E000 )->IRER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F));
+}
+# 4616 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t NVIC_GetStatusIRQ(IRQn_Type IRQn)
+{
+  return((uint32_t) ((((PFIC_Type *) 0xE000E000 )->ISR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0));
+}
+# 4631 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t NVIC_GetPendingIRQ(IRQn_Type IRQn)
+{
+  return((uint32_t) ((((PFIC_Type *) 0xE000E000 )->IPR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0));
+}
+# 4645 "../../ch32v003fun/ch32v003fun.h"
+static inline void NVIC_SetPendingIRQ(IRQn_Type IRQn)
+{
+  ((PFIC_Type *) 0xE000E000 )->IPSR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F));
+}
+# 4659 "../../ch32v003fun/ch32v003fun.h"
+static inline void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+{
+  ((PFIC_Type *) 0xE000E000 )->IPRR[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F));
+}
+# 4674 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t NVIC_GetActive(IRQn_Type IRQn)
+{
+  return((uint32_t)((((PFIC_Type *) 0xE000E000 )->IACTR[(uint32_t)(IRQn) >> 5] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0));
+}
+# 4691 "../../ch32v003fun/ch32v003fun.h"
+static inline void NVIC_SetPriority(IRQn_Type IRQn, uint8_t priority)
+{
+  ((PFIC_Type *) 0xE000E000 )->IPRIOR[(uint32_t)(IRQn)] = priority;
+}
+# 4713 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t NVIC_get_enabled_IRQs()
+{
+ return ( ((((PFIC_Type *) 0xE000E000 )->ISR[0] >> 2) & 0b11) | ((((PFIC_Type *) 0xE000E000 )->ISR[0] >> 12) << 2) | ((((PFIC_Type *) 0xE000E000 )->ISR[1] & 0b1111111) << 23) );
+}
+
+static inline void NVIC_clear_all_IRQs_except(uint8_t IRQn_to_keep)
+{
+ if (!(IRQn_to_keep >> 5)) {
+  ((PFIC_Type *) 0xE000E000 )->IRER[0] = (~0) & (~(1 << IRQn_to_keep));
+  ((PFIC_Type *) 0xE000E000 )->IRER[1] = (~0);
+ }
+ else {
+  IRQn_to_keep = IRQn_to_keep >> 5;
+  ((PFIC_Type *) 0xE000E000 )->IRER[0] = (~0);
+  ((PFIC_Type *) 0xE000E000 )->IRER[1] = (~0) & (~(1 << IRQn_to_keep));
+ }
+}
+
+static inline void NVIC_restore_IRQs(uint32_t old_state)
+{
+ ((PFIC_Type *) 0xE000E000 )->IENR[0] = (old_state >> 2) << 12;
+ ((PFIC_Type *) 0xE000E000 )->IENR[1] = old_state >> 23;
+}
+# 4744 "../../ch32v003fun/ch32v003fun.h"
+__attribute__( ( always_inline ) ) static inline void __WFI(void)
+{
+  ((PFIC_Type *) 0xE000E000 )->SCTLR &= ~(1<<3);
+  asm volatile ("wfi");
+}
+# 4757 "../../ch32v003fun/ch32v003fun.h"
+__attribute__( ( always_inline ) ) static inline void __WFE(void)
+{
+  uint32_t t;
+
+  t = ((PFIC_Type *) 0xE000E000 )->SCTLR;
+  ((PFIC_Type *) 0xE000E000 )->SCTLR |= (1<<3)|(1<<5);
+  ((PFIC_Type *) 0xE000E000 )->SCTLR = (((PFIC_Type *) 0xE000E000 )->SCTLR & ~(1<<5)) | ( t & (1<<5));
+  asm volatile ("wfi");
+  asm volatile ("wfi");
+}
+# 4780 "../../ch32v003fun/ch32v003fun.h"
+static inline void SetVTFIRQ(uint32_t addr, IRQn_Type IRQn, uint8_t num, FunctionalState NewState){
+  if(num > 1) return ;
+
+  if (NewState != DISABLE)
+  {
+      ((PFIC_Type *) 0xE000E000 )->VTFIDR[num] = IRQn;
+      ((PFIC_Type *) 0xE000E000 )->VTFADDR[num] = ((addr&0xFFFFFFFE)|0x1);
+  }
+  else{
+      ((PFIC_Type *) 0xE000E000 )->VTFIDR[num] = IRQn;
+      ((PFIC_Type *) 0xE000E000 )->VTFADDR[num] = ((addr&0xFFFFFFFE)&(~0x1));
+  }
+}
+# 4801 "../../ch32v003fun/ch32v003fun.h"
+static inline void NVIC_SystemReset(void)
+{
+  ((PFIC_Type *) 0xE000E000 )->CFGR = ((uint32_t)0xBEEF0000)|(1<<7);
+}
+
+
+static inline uint32_t __get_INTSYSCR(void)
+{
+    uint32_t result;
+    asm volatile("csrr %0, 0x804": "=r"(result));
+    return (result);
+}
+
+static inline void __set_INTSYSCR( uint32_t value )
+{
+    asm volatile("csrw 0x804, %0" : : "r"(value));
+}
+# 4827 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_MSTATUS(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrr %0," "mstatus": "=r"(result));
+    return (result);
+}
+# 4844 "../../ch32v003fun/ch32v003fun.h"
+static inline void __set_MSTATUS(uint32_t value)
+{
+    __asm volatile("csrw mstatus, %0" : : "r"(value));
+}
+# 4856 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_MISA(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrr %0,""misa" : "=r"(result));
+    return (result);
+}
+# 4873 "../../ch32v003fun/ch32v003fun.h"
+static inline void __set_MISA(uint32_t value)
+{
+    __asm volatile("csrw misa, %0" : : "r"(value));
+}
+# 4885 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_MTVEC(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrr %0," "mtvec": "=r"(result));
+    return (result);
+}
+# 4902 "../../ch32v003fun/ch32v003fun.h"
+static inline void __set_MTVEC(uint32_t value)
+{
+    __asm volatile("csrw mtvec, %0":: "r"(value));
+}
+# 4914 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_MSCRATCH(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrr %0," "mscratch" : "=r"(result));
+    return (result);
+}
+# 4931 "../../ch32v003fun/ch32v003fun.h"
+static inline void __set_MSCRATCH(uint32_t value)
+{
+    __asm volatile("csrw mscratch, %0" : : "r"(value));
+}
+# 4943 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_MEPC(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrr %0," "mepc" : "=r"(result));
+    return (result);
+}
+# 4958 "../../ch32v003fun/ch32v003fun.h"
+static inline void __set_MEPC(uint32_t value)
+{
+    __asm volatile("csrw mepc, %0" : : "r"(value));
+}
+# 4970 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_MCAUSE(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrr %0," "mcause": "=r"(result));
+    return (result);
+}
+# 4985 "../../ch32v003fun/ch32v003fun.h"
+static inline void __set_MCAUSE(uint32_t value)
+{
+    __asm volatile("csrw mcause, %0":: "r"(value));
+}
+# 4997 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_MVENDORID(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrr %0,""mvendorid": "=r"(result));
+    return (result);
+}
+# 5012 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_MARCHID(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrr %0,""marchid": "=r"(result));
+    return (result);
+}
+# 5027 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_MIMPID(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrr %0,""mimpid": "=r"(result));
+    return (result);
+}
+# 5042 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_MHARTID(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrr %0,""mhartid": "=r"(result));
+    return (result);
+}
+# 5057 "../../ch32v003fun/ch32v003fun.h"
+static inline uint32_t __get_SP(void)
+{
+    uint32_t result;
+
+    __asm volatile("mv %0,""sp": "=r"(result):);
+    return (result);
+}
+
+
+
+
+static inline void Delay_Tiny( int n ) {
+ asm volatile( "		mv a5, %[n]\n		1: 		c.addi a5, -1\n		c.bnez a5, 1b"
+
+
+
+                 : : [n]"r"(n) : "a5" );
+}
+# 5123 "../../ch32v003fun/ch32v003fun.h"
+void handle_reset() __attribute__((naked)) __attribute((section(".text.handle_reset"))) __attribute__((used));
+void DefaultIRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute__((naked)) __attribute__((used));
+
+
+ void NMI_RCC_CSS_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute__((naked)) __attribute__((used));
+# 5141 "../../ch32v003fun/ch32v003fun.h"
+void DelaySysTick( uint32_t n );
+
+
+int main() __attribute__((used));
+void SystemInit(void);
+# 5159 "../../ch32v003fun/ch32v003fun.h"
+void WaitForDebuggerToAttach();
+
+
+int _write(int fd, const char *buf, int size);
+
+
+void poll_input();
+
+
+void handle_debug_input( int numbytes, uint8_t * data );
+# 14 "../../ch32v003fun/ch32v003fun.c" 2
+
+int errno;
+
+int mini_vsnprintf(char *buffer, unsigned int buffer_len, const char *fmt, va_list va);
+int mini_vpprintf(int (*puts)(char* s, int len, void* buf), void* buf, const char *fmt, va_list va);
+
+static int __puts_uart(char *s, int len, void *buf)
+{
+ _write( 0, s, len );
+ return len;
+}
+
+int printf(const char* format, ...)
+{
+ va_list args;
+ 
+# 29 "../../ch32v003fun/ch32v003fun.c" 3 4
+__builtin_va_start(
+# 29 "../../ch32v003fun/ch32v003fun.c"
+args
+# 29 "../../ch32v003fun/ch32v003fun.c" 3 4
+,
+# 29 "../../ch32v003fun/ch32v003fun.c"
+format
+# 29 "../../ch32v003fun/ch32v003fun.c" 3 4
+)
+# 29 "../../ch32v003fun/ch32v003fun.c"
+                        ;
+ int ret_status = mini_vpprintf(__puts_uart, 0, format, args);
+ 
+# 31 "../../ch32v003fun/ch32v003fun.c" 3 4
+__builtin_va_end(
+# 31 "../../ch32v003fun/ch32v003fun.c"
+args
+# 31 "../../ch32v003fun/ch32v003fun.c" 3 4
+)
+# 31 "../../ch32v003fun/ch32v003fun.c"
+              ;
+ return ret_status;
+}
+# 72 "../../ch32v003fun/ch32v003fun.c"
+typedef void * mbstate_t;
+# 113 "../../ch32v003fun/ch32v003fun.c"
+size_t strlen(const char *s) { const char *a = s;for (; *s; s++);return s-a; }
+size_t strnlen(const char *s, size_t n) { const char *p = memchr(s, 0, n); return p ? p-s : n;}
+void *memset(void *dest, int c, size_t n) { unsigned char *s = dest; for (; n; n--, s++) *s = c; return dest; }
+char *strcpy(char *d, const char *s) { for (; (*d=*s); s++, d++); return d; }
+char *strncpy(char *d, const char *s, size_t n) { for (; n && (*d=*s); n--, s++, d++); return d; }
+int strcmp(const char *l, const char *r)
+{
+ for (; *l==*r && *l; l++, r++);
+ return *(unsigned char *)l - *(unsigned char *)r;
+}
+int strncmp(const char *_l, const char *_r, size_t n)
+{
+ const unsigned char *l=(void *)_l, *r=(void *)_r;
+ if (!n--) return 0;
+ for (; *l && *r && n && *l == *r ; l++, r++, n--);
+ return *l - *r;
+}
+
+static char *twobyte_strstr(const unsigned char *h, const unsigned char *n)
+{
+ uint16_t nw = n[0]<<8 | n[1], hw = h[0]<<8 | h[1];
+ for (h++; *h && hw != nw; hw = hw<<8 | *++h);
+ return *h ? (char *)h-1 : 0;
+}
+
+static char *threebyte_strstr(const unsigned char *h, const unsigned char *n)
+{
+ uint32_t nw = (uint32_t)n[0]<<24 | n[1]<<16 | n[2]<<8;
+ uint32_t hw = (uint32_t)h[0]<<24 | h[1]<<16 | h[2]<<8;
+ for (h+=2; *h && hw != nw; hw = (hw|*++h)<<8);
+ return *h ? (char *)h-2 : 0;
+}
+
+static char *fourbyte_strstr(const unsigned char *h, const unsigned char *n)
+{
+ uint32_t nw = (uint32_t)n[0]<<24 | n[1]<<16 | n[2]<<8 | n[3];
+ uint32_t hw = (uint32_t)h[0]<<24 | h[1]<<16 | h[2]<<8 | h[3];
+ for (h+=3; *h && hw != nw; hw = hw<<8 | *++h);
+ return *h ? (char *)h-3 : 0;
+}
+
+
+
+
+
+
+
+static char *twoway_strstr(const unsigned char *h, const unsigned char *n)
+{
+ const unsigned char *z;
+ size_t l, ip, jp, k, p, ms, p0, mem, mem0;
+ size_t byteset[32 / sizeof(size_t)] = { 0 };
+ size_t shift[256];
+
+
+ for (l=0; n[l] && h[l]; l++)
+  ((byteset)[(size_t)(n[l])/(8*sizeof *(byteset))] |= (size_t)1<<((size_t)(n[l])%(8*sizeof *(byteset)))), shift[n[l]] = l+1;
+ if (n[l]) return 0;
+
+
+ ip = -1; jp = 0; k = p = 1;
+ while (jp+k<l) {
+  if (n[ip+k] == n[jp+k]) {
+   if (k == p) {
+    jp += p;
+    k = 1;
+   } else k++;
+  } else if (n[ip+k] > n[jp+k]) {
+   jp += k;
+   k = 1;
+   p = jp - ip;
+  } else {
+   ip = jp++;
+   k = p = 1;
+  }
+ }
+ ms = ip;
+ p0 = p;
+
+
+ ip = -1; jp = 0; k = p = 1;
+ while (jp+k<l) {
+  if (n[ip+k] == n[jp+k]) {
+   if (k == p) {
+    jp += p;
+    k = 1;
+   } else k++;
+  } else if (n[ip+k] < n[jp+k]) {
+   jp += k;
+   k = 1;
+   p = jp - ip;
+  } else {
+   ip = jp++;
+   k = p = 1;
+  }
+ }
+ if (ip+1 > ms+1) ms = ip;
+ else p = p0;
+
+
+ if (memcmp(n, n+p, ms+1)) {
+  mem0 = 0;
+  p = ((ms)>(l-ms-1)?(ms):(l-ms-1)) + 1;
+ } else mem0 = l-p;
+ mem = 0;
+
+
+ z = h;
+
+
+ for (;;) {
+
+  if (z-h < l) {
+
+   size_t grow = l | 63;
+   const unsigned char *z2 = memchr(z, 0, grow);
+   if (z2) {
+    z = z2;
+    if (z-h < l) return 0;
+   } else z += grow;
+  }
+
+
+  if (((byteset)[(size_t)(h[l-1])/(8*sizeof *(byteset))] & (size_t)1<<((size_t)(h[l-1])%(8*sizeof *(byteset))))) {
+   k = l-shift[h[l-1]];
+   if (k) {
+    if (k < mem) k = mem;
+    h += k;
+    mem = 0;
+    continue;
+   }
+  } else {
+   h += l;
+   mem = 0;
+   continue;
+  }
+
+
+  for (k=((ms+1)>(mem)?(ms+1):(mem)); n[k] && n[k] == h[k]; k++);
+  if (n[k]) {
+   h += k-ms;
+   mem = 0;
+   continue;
+  }
+
+  for (k=ms+1; k>mem && n[k-1] == h[k-1]; k--);
+  if (k <= mem) return (char *)h;
+  h += p;
+  mem = mem0;
+ }
+}
+
+char *strstr(const char *h, const char *n)
+{
+
+ if (!n[0]) return (char *)h;
+
+
+ h = strchr(h, *n);
+ if (!h || !n[1]) return (char *)h;
+ if (!h[1]) return 0;
+ if (!n[2]) return twobyte_strstr((void *)h, (void *)n);
+ if (!h[2]) return 0;
+ if (!n[3]) return threebyte_strstr((void *)h, (void *)n);
+ if (!h[3]) return 0;
+ if (!n[4]) return fourbyte_strstr((void *)h, (void *)n);
+
+ return twoway_strstr((void *)h, (void *)n);
+}
+
+char *strchr(const char *s, int c)
+{
+ c = (unsigned char)c;
+ if (!c) return (char *)s + strlen(s);
+ for (; *s && *(unsigned char *)s != c; s++);
+ return (char *)s;
+}
+
+
+void *__memrchr(const void *m, int c, size_t n)
+{
+ const unsigned char *s = m;
+ c = (unsigned char)c;
+ while (n--) if (s[n]==c) return (void *)(s+n);
+ return 0;
+}
+
+char *strrchr(const char *s, int c)
+{
+ return __memrchr(s, c, strlen(s) + 1);
+}
+
+void *memcpy(void *dest, const void *src, size_t n)
+{
+ unsigned char *d = dest;
+ const unsigned char *s = src;
+ for (; n; n--) *d++ = *s++;
+ return dest;
+}
+
+int memcmp(const void *vl, const void *vr, size_t n)
+{
+ const unsigned char *l=vl, *r=vr;
+ for (; n && *l == *r; n--, l++, r++);
+ return n ? *l-*r : 0;
+}
+
+
+void *memmove(void *dest, const void *src, size_t n)
+{
+ char *d = dest;
+ const char *s = src;
+
+ if (d==s) return d;
+ if ((uintptr_t)s-(uintptr_t)d-n <= -2*n) return memcpy(d, s, n);
+
+ if (d<s) {
+  for (; n; n--) *d++ = *s++;
+ } else {
+  while (n) n--, d[n] = s[n];
+ }
+
+ return dest;
+}
+void *memchr(const void *src, int c, size_t n)
+{
+ const unsigned char *s = src;
+ c = (unsigned char)c;
+ for (; n && *s != c; s++, n--);
+ return n ? (void *)s : 0;
+}
+
+int puts(const char *s)
+{
+ int sl = strlen( s );
+ _write(0, s, sl );
+ _write(0, "\n", 1 );
+ return sl + 1;
+}
+# 398 "../../ch32v003fun/ch32v003fun.c"
+static int
+mini_itoa(long value, unsigned int radix, int uppercase, int unsig,
+  char *buffer)
+{
+ char *pbuffer = buffer;
+ int negative = 0;
+ int i, len;
+
+
+ if (radix > 16)
+  return 0;
+
+ if (value < 0 && !unsig) {
+  negative = 1;
+  value = -value;
+ }
+
+
+ do {
+  int digit = value % radix;
+  *(pbuffer++) = (digit < 10 ? '0' + digit : (uppercase ? 'A' : 'a') + digit - 10);
+  value /= radix;
+ } while (value > 0);
+
+ if (negative)
+  *(pbuffer++) = '-';
+
+ *(pbuffer) = '\0';
+
+
+
+ len = (pbuffer - buffer);
+ for (i = 0; i < len / 2; i++) {
+  char j = buffer[i];
+  buffer[i] = buffer[len-i-1];
+  buffer[len-i-1] = j;
+ }
+
+ return len;
+}
+
+static int
+mini_pad(char* ptr, int len, char pad_char, int pad_to, char *buffer)
+{
+ int i;
+ int overflow = 0;
+ char * pbuffer = buffer;
+ if(pad_to == 0) pad_to = len;
+ if(len > pad_to) {
+  len = pad_to;
+  overflow = 1;
+ }
+ for(i = pad_to - len; i > 0; i --) {
+  *(pbuffer++) = pad_char;
+ }
+ for(i = len; i > 0; i --) {
+  *(pbuffer++) = *(ptr++);
+ }
+ len = pbuffer - buffer;
+ if(overflow) {
+  for (i = 0; i < 3 && pbuffer > buffer; i ++) {
+   *(pbuffer-- - 1) = '*';
+  }
+ }
+ return len;
+}
+
+struct mini_buff {
+ char *buffer, *pbuffer;
+ unsigned int buffer_len;
+};
+
+static int
+_puts(char *s, int len, void *buf)
+{
+ if(!buf) return len;
+ struct mini_buff *b = buf;
+ char * p0 = b->buffer;
+ int i;
+
+ for (i = 0; i < len; i++) {
+  if(b->pbuffer == b->buffer + b->buffer_len - 1) {
+   break;
+  }
+  *(b->pbuffer ++) = s[i];
+ }
+ *(b->pbuffer) = 0;
+ return b->pbuffer - p0;
+}
+# 504 "../../ch32v003fun/ch32v003fun.c"
+int
+mini_vsnprintf(char *buffer, unsigned int buffer_len, const char *fmt, va_list va)
+{
+ struct mini_buff b;
+ b.buffer = buffer;
+ b.pbuffer = buffer;
+ b.buffer_len = buffer_len;
+ if(buffer_len == 0) buffer = (void*) 0;
+ int n = mini_vpprintf(_puts, (buffer != (void*)0)?&b:(void*)0, fmt, va);
+ if(buffer == (void*) 0) {
+  return n;
+ }
+ return b.pbuffer - b.buffer;
+}
+
+int
+mini_vpprintf(int (*puts)(char* s, int len, void* buf), void* buf, const char *fmt, va_list va)
+{
+ char bf[24];
+ char bf2[24];
+ char ch;
+
+
+
+ if(puts == (void*)0) {
+
+  puts = _puts; buf = (void*)0;
+ }
+ int n = 0;
+ while ((ch=*(fmt++))) {
+  int len;
+  if (ch!='%') {
+   len = 1;
+   len = puts(&ch, len, buf);
+  } else {
+   char pad_char = ' ';
+   int pad_to = 0;
+   char l = 0;
+   char *ptr;
+
+   ch=*(fmt++);
+
+
+   if (ch == '0') pad_char = '0';
+   while (ch >= '0' && ch <= '9') {
+    pad_to = pad_to * 10 + (ch - '0');
+    ch=*(fmt++);
+   }
+   if(pad_to > (signed int) sizeof(bf)) {
+    pad_to = sizeof(bf);
+   }
+   if (ch == 'l') {
+    l = 1;
+    ch=*(fmt++);
+   }
+
+   switch (ch) {
+    case 0:
+     goto end;
+    case 'u':
+    case 'd':
+     if(l) {
+      len = mini_itoa(
+# 566 "../../ch32v003fun/ch32v003fun.c" 3 4
+                     __builtin_va_arg(
+# 566 "../../ch32v003fun/ch32v003fun.c"
+                     va
+# 566 "../../ch32v003fun/ch32v003fun.c" 3 4
+                     ,
+# 566 "../../ch32v003fun/ch32v003fun.c"
+                     unsigned long
+# 566 "../../ch32v003fun/ch32v003fun.c" 3 4
+                     )
+# 566 "../../ch32v003fun/ch32v003fun.c"
+                                              , 10, 0, (ch=='u'), bf2);
+     } else {
+      if(ch == 'u') {
+       len = mini_itoa((unsigned long) 
+# 569 "../../ch32v003fun/ch32v003fun.c" 3 4
+                                      __builtin_va_arg(
+# 569 "../../ch32v003fun/ch32v003fun.c"
+                                      va
+# 569 "../../ch32v003fun/ch32v003fun.c" 3 4
+                                      ,
+# 569 "../../ch32v003fun/ch32v003fun.c"
+                                      unsigned int
+# 569 "../../ch32v003fun/ch32v003fun.c" 3 4
+                                      )
+# 569 "../../ch32v003fun/ch32v003fun.c"
+                                                              , 10, 0, 1, bf2);
+      } else {
+       len = mini_itoa((long) 
+# 571 "../../ch32v003fun/ch32v003fun.c" 3 4
+                             __builtin_va_arg(
+# 571 "../../ch32v003fun/ch32v003fun.c"
+                             va
+# 571 "../../ch32v003fun/ch32v003fun.c" 3 4
+                             ,
+# 571 "../../ch32v003fun/ch32v003fun.c"
+                             int
+# 571 "../../ch32v003fun/ch32v003fun.c" 3 4
+                             )
+# 571 "../../ch32v003fun/ch32v003fun.c"
+                                            , 10, 0, 0, bf2);
+      }
+     }
+     len = mini_pad(bf2, len, pad_char, pad_to, bf);
+     len = puts(bf, len, buf);
+     break;
+
+    case 'x':
+    case 'X':
+     if(l) {
+      len = mini_itoa(
+# 581 "../../ch32v003fun/ch32v003fun.c" 3 4
+                     __builtin_va_arg(
+# 581 "../../ch32v003fun/ch32v003fun.c"
+                     va
+# 581 "../../ch32v003fun/ch32v003fun.c" 3 4
+                     ,
+# 581 "../../ch32v003fun/ch32v003fun.c"
+                     unsigned long
+# 581 "../../ch32v003fun/ch32v003fun.c" 3 4
+                     )
+# 581 "../../ch32v003fun/ch32v003fun.c"
+                                              , 16, (ch=='X'), 1, bf2);
+     } else {
+      len = mini_itoa((unsigned long) 
+# 583 "../../ch32v003fun/ch32v003fun.c" 3 4
+                                     __builtin_va_arg(
+# 583 "../../ch32v003fun/ch32v003fun.c"
+                                     va
+# 583 "../../ch32v003fun/ch32v003fun.c" 3 4
+                                     ,
+# 583 "../../ch32v003fun/ch32v003fun.c"
+                                     unsigned int
+# 583 "../../ch32v003fun/ch32v003fun.c" 3 4
+                                     )
+# 583 "../../ch32v003fun/ch32v003fun.c"
+                                                             , 16, (ch=='X'), 1, bf2);
+     }
+     len = mini_pad(bf2, len, pad_char, pad_to, bf);
+     len = puts(bf, len, buf);
+     break;
+
+    case 'c' :
+     ch = (char)(
+# 590 "../../ch32v003fun/ch32v003fun.c" 3 4
+                __builtin_va_arg(
+# 590 "../../ch32v003fun/ch32v003fun.c"
+                va
+# 590 "../../ch32v003fun/ch32v003fun.c" 3 4
+                ,
+# 590 "../../ch32v003fun/ch32v003fun.c"
+                int
+# 590 "../../ch32v003fun/ch32v003fun.c" 3 4
+                )
+# 590 "../../ch32v003fun/ch32v003fun.c"
+                               );
+     len = mini_pad(&ch, 1, pad_char, pad_to, bf);
+     len = puts(bf, len, buf);
+     break;
+
+    case 's' :
+     ptr = 
+# 596 "../../ch32v003fun/ch32v003fun.c" 3 4
+          __builtin_va_arg(
+# 596 "../../ch32v003fun/ch32v003fun.c"
+          va
+# 596 "../../ch32v003fun/ch32v003fun.c" 3 4
+          ,
+# 596 "../../ch32v003fun/ch32v003fun.c"
+          char*
+# 596 "../../ch32v003fun/ch32v003fun.c" 3 4
+          )
+# 596 "../../ch32v003fun/ch32v003fun.c"
+                           ;
+     len = strlen(ptr);
+     if (pad_to > 0) {
+      len = mini_pad(ptr, len, pad_char, pad_to, bf);
+      len = puts(bf, len, buf);
+     } else {
+      len = puts(ptr, len, buf);
+     }
+     break;
+# 619 "../../ch32v003fun/ch32v003fun.c"
+    default:
+     len = 1;
+     len = puts(&ch, len, buf);
+     break;
+   }
+  }
+  n = n + len;
+ }
+end:
+ return n;
+}
+
+
+int
+mini_snprintf(char* buffer, unsigned int buffer_len, const char *fmt, ...)
+{
+ int ret;
+ va_list va;
+ 
+# 637 "../../ch32v003fun/ch32v003fun.c" 3 4
+__builtin_va_start(
+# 637 "../../ch32v003fun/ch32v003fun.c"
+va
+# 637 "../../ch32v003fun/ch32v003fun.c" 3 4
+,
+# 637 "../../ch32v003fun/ch32v003fun.c"
+fmt
+# 637 "../../ch32v003fun/ch32v003fun.c" 3 4
+)
+# 637 "../../ch32v003fun/ch32v003fun.c"
+                 ;
+ ret = mini_vsnprintf(buffer, buffer_len, fmt, va);
+ 
+# 639 "../../ch32v003fun/ch32v003fun.c" 3 4
+__builtin_va_end(
+# 639 "../../ch32v003fun/ch32v003fun.c"
+va
+# 639 "../../ch32v003fun/ch32v003fun.c" 3 4
+)
+# 639 "../../ch32v003fun/ch32v003fun.c"
+          ;
+
+ return ret;
+}
+
+int
+mini_pprintf(int (*puts)(char*s, int len, void* buf), void* buf, const char *fmt, ...)
+{
+ int ret;
+ va_list va;
+ 
+# 649 "../../ch32v003fun/ch32v003fun.c" 3 4
+__builtin_va_start(
+# 649 "../../ch32v003fun/ch32v003fun.c"
+va
+# 649 "../../ch32v003fun/ch32v003fun.c" 3 4
+,
+# 649 "../../ch32v003fun/ch32v003fun.c"
+fmt
+# 649 "../../ch32v003fun/ch32v003fun.c" 3 4
+)
+# 649 "../../ch32v003fun/ch32v003fun.c"
+                 ;
+ ret = mini_vpprintf(puts, buf, fmt, va);
+ 
+# 651 "../../ch32v003fun/ch32v003fun.c" 3 4
+__builtin_va_end(
+# 651 "../../ch32v003fun/ch32v003fun.c"
+va
+# 651 "../../ch32v003fun/ch32v003fun.c" 3 4
+)
+# 651 "../../ch32v003fun/ch32v003fun.c"
+          ;
+
+ return ret;
+}
+# 668 "../../ch32v003fun/ch32v003fun.c"
+int main() __attribute__((used));
+void SystemInit( void ) __attribute__((used));
+
+extern uint32_t * _sbss;
+extern uint32_t * _ebss;
+extern uint32_t * _data_lma;
+extern uint32_t * _data_vma;
+extern uint32_t * _edata;
+
+
+
+void DefaultIRQHandler( void )
+{
+
+ asm volatile( "1: j 1b" );
+}
+# 696 "../../ch32v003fun/ch32v003fun.c"
+void NMI_RCC_CSS_IRQHandler( void )
+{
+ ((RCC_TypeDef *)((((uint32_t)0x40000000) + 0x20000) + 0x1000))->INTR |= ((uint32_t)0x00800000);
+}
+
+void NMI_Handler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("NMI_RCC_CSS_IRQHandler"))) __attribute__((used));
+
+
+
+void HardFault_Handler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void SysTick_Handler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void SW_Handler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void WWDG_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void PVD_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void FLASH_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void RCC_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void EXTI7_0_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void AWU_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void DMA1_Channel1_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void DMA1_Channel2_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void DMA1_Channel3_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void DMA1_Channel4_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void DMA1_Channel5_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void DMA1_Channel6_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void DMA1_Channel7_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void ADC1_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void I2C1_EV_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void I2C1_ER_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void USART1_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void SPI1_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void TIM1_BRK_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void TIM1_UP_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void TIM1_TRG_COM_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void TIM1_CC_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+void TIM2_IRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
+
+void InterruptVector() __attribute__((naked)) __attribute((section(".init"))) __attribute((weak,alias("InterruptVectorDefault")));
+void InterruptVectorDefault() __attribute__((naked)) __attribute((section(".init")));
+
+
+void InterruptVectorDefault()
+{
+ asm volatile( "\n	.align  2\n	.option   push;\n	.option   norvc;\n	j handle_reset\n"
+
+
+
+                   );
+
+ asm volatile( "\n	.word   0\n	.word   NMI_Handler               /* NMI Handler */                    \n	.word   HardFault_Handler         /* Hard Fault Handler */             \n	.word   0\n	.word   0\n	.word   0\n	.word   0\n	.word   0\n	.word   0\n	.word   0\n	.word   0\n	.word   SysTick_Handler           /* SysTick Handler */                \n	.word   0\n	.word   SW_Handler                /* SW Handler */                     \n	.word   0\n	/* External Interrupts */                                              \n	.word   WWDG_IRQHandler           /* Window Watchdog */                \n	.word   PVD_IRQHandler            /* PVD through EXTI Line detect */   \n	.word   FLASH_IRQHandler          /* Flash */                          \n	.word   RCC_IRQHandler            /* RCC */                            \n	.word   EXTI7_0_IRQHandler        /* EXTI Line 7..0 */                 \n	.word   AWU_IRQHandler            /* AWU */                            \n	.word   DMA1_Channel1_IRQHandler  /* DMA1 Channel 1 */                 \n	.word   DMA1_Channel2_IRQHandler  /* DMA1 Channel 2 */                 \n	.word   DMA1_Channel3_IRQHandler  /* DMA1 Channel 3 */                 \n	.word   DMA1_Channel4_IRQHandler  /* DMA1 Channel 4 */                 \n	.word   DMA1_Channel5_IRQHandler  /* DMA1 Channel 5 */                 \n	.word   DMA1_Channel6_IRQHandler  /* DMA1 Channel 6 */                 \n	.word   DMA1_Channel7_IRQHandler  /* DMA1 Channel 7 */                 \n	.word   ADC1_IRQHandler           /* ADC1 */                           \n	.word   I2C1_EV_IRQHandler        /* I2C1 Event */                     \n	.word   I2C1_ER_IRQHandler        /* I2C1 Error */                     \n	.word   USART1_IRQHandler         /* USART1 */                         \n	.word   SPI1_IRQHandler           /* SPI1 */                           \n	.word   TIM1_BRK_IRQHandler       /* TIM1 Break */                     \n	.word   TIM1_UP_IRQHandler        /* TIM1 Update */                    \n	.word   TIM1_TRG_COM_IRQHandler   /* TIM1 Trigger and Commutation */   \n	.word   TIM1_CC_IRQHandler        /* TIM1 Capture Compare */           \n	.word   TIM2_IRQHandler           /* TIM2 */                           \n");
+# 786 "../../ch32v003fun/ch32v003fun.c"
+ asm volatile( ".option   pop;\n");
+}
+
+void handle_reset()
+{
+ asm volatile( "\n.option push\n.option norelax\n	la gp, __global_pointer$\n.option pop\n	la sp, _eusrstack\n"
+
+
+
+
+
+
+".option arch, +zicsr\n"
+
+
+"	li a0, 0x80\n	csrw mstatus, a0\n	li a3, 0x3\n	la a0, InterruptVector\n	or a0, a0, a3\n	csrw mtvec, a0\n"
+
+
+
+
+
+ : : : "a0", "a3", "memory");
+
+
+
+asm volatile(
+"	la a0, _sbss\n	la a1, _ebss\n	li a2, 0\n	bge a0, a1, 2f\n1:	sw a2, 0(a0)\n	addi a0, a0, 4\n	blt a0, a1, 1b\n2:"
+# 821 "../../ch32v003fun/ch32v003fun.c"
+"	la a0, _data_lma\n	la a1, _data_vma\n	la a2, _edata\n1:	beq a1, a2, 2f\n	lw a3, 0(a0)\n	sw a3, 0(a1)\n	addi a0, a0, 4\n	addi a1, a1, 4\n	bne a1, a2, 1b\n2:\n"
+# 837 "../../ch32v003fun/ch32v003fun.c"
+: : : "a0", "a1", "a2", "a3", "memory"
+
+);
+
+
+
+
+
+ ((SysTick_Type *) 0xE000F000)->CTLR = 1;
+
+
+
+asm volatile(
+"	csrw mepc, %[main]\n"
+"	mret\n" : : [main]"r"(main) );
+}
+# 895 "../../ch32v003fun/ch32v003fun.c"
+void handle_debug_input( int numbytes, uint8_t * data ) __attribute__((weak));
+void handle_debug_input( int numbytes, uint8_t * data ) { }
+
+static void internal_handle_input( uint32_t * dmdata0 )
+{
+ uint32_t dmd0 = *dmdata0;
+ int bytes = (dmd0 & 0x3f) - 4;
+ if( bytes > 0 )
+ {
+  handle_debug_input( bytes, ((uint8_t*)dmdata0) + 1 );
+ }
+}
+
+
+void poll_input()
+{
+ uint32_t lastdmd = (*((volatile uint32_t*)0xe00000f4));
+  if( !(lastdmd & 0x80) )
+ {
+  internal_handle_input( (uint32_t*)((volatile uint32_t*)0xe00000f4) );
+  *((volatile uint32_t*)0xe00000f4) = 0x84;
+ }
+}
+# 927 "../../ch32v003fun/ch32v003fun.c"
+int _write(int fd, const char *buf, int size)
+{
+ char buffer[4] = { 0 };
+ int place = 0;
+ uint32_t lastdmd;
+ uint32_t timeout = 160000;
+
+ if( size == 0 )
+ {
+  lastdmd = (*((volatile uint32_t*)0xe00000f4));
+  if( lastdmd && !(lastdmd&0x80) ) internal_handle_input( (uint32_t*)((volatile uint32_t*)0xe00000f4) );
+ }
+ while( place < size )
+ {
+  int tosend = size - place;
+  if( tosend > 7 ) tosend = 7;
+
+  while( ( lastdmd = (*((volatile uint32_t*)0xe00000f4)) ) & 0x80 )
+   if( timeout-- == 0 ) return place;
+
+  if( lastdmd ) internal_handle_input( (uint32_t*)((volatile uint32_t*)0xe00000f4) );
+
+  timeout = 160000;
+
+  int t = 3;
+  while( t < tosend )
+  {
+   buffer[t-3] = buf[t+place];
+   t++;
+  }
+  *((volatile uint32_t*)0xe00000f8) = *(uint32_t*)&(buffer[0]);
+  t = 0;
+  while( t < tosend && t < 3 )
+  {
+   buffer[t+1] = buf[t+place];
+   t++;
+  }
+  buffer[0] = 0x80 | (tosend + 4);
+  *((volatile uint32_t*)0xe00000f4) = *(uint32_t*)&(buffer[0]);
+
+
+  place += tosend;
+ }
+ return size;
+}
+
+
+int putchar(int c)
+{
+ int timeout = 160000;
+ uint32_t lastdmd = 0;
+
+ while( ( lastdmd = (*((volatile uint32_t*)0xe00000f4)) ) & 0x80 )
+  if( timeout-- == 0 ) return 0;
+
+
+ lastdmd = (*((volatile uint32_t*)0xe00000f4));
+ if( lastdmd ) internal_handle_input( (uint32_t*)((volatile uint32_t*)0xe00000f4) );
+
+ while( (lastdmd = (*((volatile uint32_t*)0xe00000f4))) & 0x80 ) if( timeout-- == 0 ) return 0;
+ if( lastdmd ) internal_handle_input( (uint32_t*)((volatile uint32_t*)0xe00000f4) );
+ *((volatile uint32_t*)0xe00000f4) = 0x85 | ((const char)c<<8);
+ return 1;
+}
+
+void SetupDebugPrintf()
+{
+
+ *((volatile uint32_t*)0xe00000f8) = 0x0;
+ *((volatile uint32_t*)0xe00000f4) = 0x80;
+}
+
+void WaitForDebuggerToAttach()
+{
+ while( ((*((volatile uint32_t*)0xe00000f4)) & 0x80) );
+}
+# 1022 "../../ch32v003fun/ch32v003fun.c"
+void DelaySysTick( uint32_t n )
+{
+ uint32_t targend = ((SysTick_Type *) 0xE000F000)->CNT + n;
+ while( ((int32_t)( ((SysTick_Type *) 0xE000F000)->CNT - targend )) < 0 );
+}
+
+void SystemInit()
+{
+# 1048 "../../ch32v003fun/ch32v003fun.c"
+  ((RCC_TypeDef *)((((uint32_t)0x40000000) + 0x20000) + 0x1000))->CFGR0 = ((uint32_t)0x00000000) | ((uint32_t)0x00000000);
+  ((RCC_TypeDef *)((((uint32_t)0x40000000) + 0x20000) + 0x1000))->CTLR = (((0x10) << 3) | ((uint32_t)0x00000001) | 0 | ((uint32_t)0x00080000)) | ((uint32_t)0x00000001) | ((uint32_t)0x01000000);
+# 1073 "../../ch32v003fun/ch32v003fun.c"
+ ((FLASH_TypeDef *)((((uint32_t)0x40000000) + 0x20000) + 0x2000))->ACTLR = ((uint8_t)0x01);
+
+
+
+
+ ((RCC_TypeDef *)((((uint32_t)0x40000000) + 0x20000) + 0x1000))->INTR = 0x009F0000;
+
+
+ while((((RCC_TypeDef *)((((uint32_t)0x40000000) + 0x20000) + 0x1000))->CTLR & ((uint32_t)0x02000000)) == 0);
+ uint32_t tmp32 = ((RCC_TypeDef *)((((uint32_t)0x40000000) + 0x20000) + 0x1000))->CFGR0 & ~(0x03);
+ ((RCC_TypeDef *)((((uint32_t)0x40000000) + 0x20000) + 0x1000))->CFGR0 = tmp32 | ((uint32_t)0x00000002);
+ while ((((RCC_TypeDef *)((((uint32_t)0x40000000) + 0x20000) + 0x1000))->CFGR0 & (uint32_t)((uint32_t)0x0000000C)) != (uint32_t)0x08);
+
+
+
+
+
+
+ SetupDebugPrintf();
+
+}

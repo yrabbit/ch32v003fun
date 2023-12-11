@@ -31,6 +31,6 @@ int main()
 		Delay_Ms( 250 );
 		GPIOD->BSHR = (1<<16) | (1<<(16+4)) | (1<<(16+6)); // Turn off GPIOs
 		GPIOC->BSHR = (1<<16);
-		Delay_Ms( 250 );
+		Delay_Ms( 1250 );
 	}
 }
